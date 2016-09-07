@@ -10,12 +10,12 @@ import arcpy, os, re
 from arcpy import env
 from arcpy.sa import *
 
-in_folder = r'C:\scratch\int' # input folder pathway for multi-raster processing 
-out_folder = r'C:\scratch\Sample_SLP7911_SeaExtcsv' # output folder
+in_folder = r'' # input folder pathway for multi-raster processing 
+out_folder = r'' # output folder
 
-arcpy.env.mask = 'C:\scratch\ProcessingExtent\NA_Coast_ext.shp' #Set the raster mask to limit processing extent
+arcpy.env.mask = '' #Set the raster mask to limit processing extent
 
-arcpy.CheckOutExtension("Spatial")                              #check for extension reqd for analysis
+arcpy.CheckOutExtension("Spatial")                              #check for ArcGIS extension reqd for analysis
 for raster in os.listdir(in_folder):                            #selects band for copy
     if raster.endswith(".tif"):                                 #check if input file is TIFF format
         print("Input file: " + raster)                          # Print output file
