@@ -6,10 +6,10 @@
 # back end of the first table
 
 filetype<-"*.dbf" #Inclue extension WITHOUT leading period
-ColumnNumberToAppend<-4
-InputPath<-"G:/tables/"
-OutputFile<-"G:/outputtest/Compiled.txt"
-StarterTable<-read.dbf("G:/tables/Export_Output.dbf")
+ColumnNumberToAppend<-4 #Set which column number(s) you wish to append
+InputPath<-"SET INPUT PATH"
+OutputFile<-"SET OUTPUT FILE"
+StarterTable<-read.dbf("SET STARTING TABLE")
 AppendedTable<-StarterTable
 allfiles<-list.files(path = InputPath, pattern = ".dbf", all.files = FALSE, full.names=TRUE,  recursive=FALSE, ignore.case=FALSE)
 
