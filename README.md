@@ -25,7 +25,7 @@ else: print bandName1 + ' not of interest'
 ###.dbf conversion
 Once all bands have been split, use `sampletool_Nov27.py` to convert raster files to .dbf tables. Take note of the input/output directories as defined by the notes in the script. There is one section of the script which you can define a vector shapefile as a mask to limit processing extent:
 ```python
-arcpy.env.mask = 'C:\scratch\ProcessingExtent\NA_Coast_ext.shp'
+arcpy.env.mask = 'INSERT MASK HERE'
 ```
 
 ### Compiling all tables into one .dbf
@@ -33,9 +33,9 @@ Once all bands have been converted to .dbf, you may append all subsequent tables
 ```R
 filetype<-"*.dbf" #Inclue extension WITHOUT leading period
 ColumnNumberToAppend<-4
-InputPath<-"G:/tables/"
-OutputFile<-"G:/outputtest/Compiled.txt"
-StarterTable<-read.dbf("G:/tables/Export_Output.dbf")
+InputPath<-"SET INPUT PATH"
+OutputFile<-"SET OUTPUT"
+StarterTable<-read.dbf("SET STARTING TABLEE")
 ```
 which allows you to set the column number which to append to the main table, directory of input tables, the file which will be output, and the starting table. Once completed you should have a one master .dbf that has complied the selected columns of all you individual .dbf files.
 
