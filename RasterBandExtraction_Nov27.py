@@ -15,8 +15,8 @@
 # from the years 1979 to 2011
 
 import arcpy, os, re
-in_raster = r'c:\scratch\slp7911.tif' # input multiband raster  
-out_folder = r'c:\scratch\int' # preferably an empty folder  
+in_raster = r'' # input multiband raster  
+out_folder = r'' # preferably an empty folder  
  
 desc = arcpy.Describe(in_raster) 
 
