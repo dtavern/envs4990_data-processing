@@ -10,10 +10,10 @@ import arcpy, os, re
 from arcpy import env
 from arcpy.sa import *
 
-in_folder = r'' # input folder pathway for multi-raster processing 
-out_folder = r'' # output folder
+in_folder = r'SET INPUT DIRECTORY' # input folder pathway for multi-raster processing 
+out_folder = r'SET OUTPUT DIRECTORY' # output folder
 
-arcpy.env.mask = '' #Set the raster mask to limit processing extent
+arcpy.env.mask = 'INSERT MASK HERE' #Set the raster mask to limit processing extent
 
 arcpy.CheckOutExtension("Spatial")                              #check for ArcGIS extension reqd for analysis
 for raster in os.listdir(in_folder):                            #selects band for copy
